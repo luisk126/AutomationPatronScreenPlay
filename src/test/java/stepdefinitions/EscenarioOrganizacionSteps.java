@@ -47,7 +47,12 @@ public class EscenarioOrganizacionSteps
         // Write code here that turns the phrase above into concrete actions
         actor.wasAbleTo(
                 SeleccionCreacionNegocio.seleccionCreacion(),
-                CrearNegocio.crearNegocioSave("Prueba1"),
+                CrearNegocio.crearNegocioSave("Prueba1")
+        );
+
+        actor.should(seeThat(the(Organizacion.ELEMENTO_UNIDAD_NEGOCIO_CREADA), isPresent()));
+
+        actor.wasAbleTo(
                 CrearReunion.crearReunionSave("PruebaReunion1", "2", "07/23/2021", "07/27/2021")
         );
 
@@ -59,6 +64,7 @@ public class EscenarioOrganizacionSteps
     {
         // Write code here that turns the phrase above into concrete actions
         actor.wasAbleTo(VolverReuniones.volverReunionesValida());
+        actor.should(seeThat(the(Meeting.ELEMENTO_UNIDAD_REUNION_CREADA), isPresent()));
     }
 
 }

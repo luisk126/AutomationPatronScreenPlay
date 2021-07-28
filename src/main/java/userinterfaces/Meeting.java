@@ -16,13 +16,14 @@ public class Meeting extends PageObject
     public static final Target INPUT_MEETING_START_DATE = Target.the("Input para diligenciar Start Date").located(By.name("StartDate"));
     public static final Target INPUT_MEETING_END_DATE = Target.the("Input para diligenciar End Date").located(By.name("EndDate"));
 
-    public static final Target SELECT_MEETING_UNIT = Target.the("Input para diligenciar Unit").located(By.id("select2-chosen-8"));
+    public static final Target SELECT_MEETING_UNIT = Target.the("Input para diligenciar Unit").locatedBy("(//input[@class='select2-focusser select2-offscreen'])[1]");
 
     public static final Target SELECT_MEETING_TIME_INI = Target.the("Selecciona el tiempo de inicio de la reunion").locatedBy("//body/div[2]/div[1]/section[1]/div[2]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[4]/select[1]");
     public static final Target SELECT_MEETING_TIME_END = Target.the("Selecciona el fin de la reunion").locatedBy("//body/div[2]/div[1]/section[1]/div[2]/div[2]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/div[1]/div[5]/select[1]");
 
     public static final Target GET_TEXT_MEETING = Target.the("Obtener texto de reunion creada").locatedBy("//a[contains(text(),'PruebaReunion1')]");
 
+    public static final Target ELEMENTO_UNIDAD_REUNION_CREADA = Target.the("Captura elemento Nuevo Negocio").locatedBy("(//a[contains(text(),'PruebaReunion1')])[1]");
 
 
 

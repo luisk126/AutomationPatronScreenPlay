@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import userinterfaces.Login;
 import userinterfaces.Organizacion;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class CrearNegocio implements Task
@@ -25,7 +26,9 @@ public class CrearNegocio implements Task
         actor.attemptsTo(
                 Enter.theValue(negocio).into(Organizacion.INPUT_NEW_NAME_NEGOCIO),
                 Click.on(Organizacion.BUTTON_SAVE_UNIDAD_NEGOCIO)
+
         );
+
     }
 
     public static CrearNegocio crearNegocioSave(String negocio)

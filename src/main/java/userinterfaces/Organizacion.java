@@ -8,5 +8,6 @@ public class Organizacion extends PageObject
 {
     public static final Target INPUT_NEW_NAME_NEGOCIO = Target.the("Input donde se diligencia el nombre del nuevo negocio").located(By.name("Name"));
     public static final Target BUTTON_SAVE_UNIDAD_NEGOCIO = Target.the("Click en boton guardar Nuevo Negocio").locatedBy("//span[contains(text(),'Save')]");
+    public static final Target ELEMENTO_UNIDAD_NEGOCIO_CREADA = Target.the("Captura elemento Nuevo Negocio").locatedBy("(//a[contains(text(),'Prueba1')])[1]");
 
 }

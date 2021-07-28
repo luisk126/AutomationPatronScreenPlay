@@ -2,10 +2,7 @@ package tasks;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Hit;
-import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.actions.selectactions.SelectByIndexFromBy;
 import org.openqa.selenium.Keys;
 import userinterfaces.Login;
@@ -41,7 +38,10 @@ public class CrearReunion implements Task
                 Enter.theValue(fechafinReiunion).into(Meeting.INPUT_MEETING_END_DATE),
                 SelectFromOptions.byVisibleText("01:40").from(Meeting.SELECT_MEETING_TIME_INI),
                 SelectFromOptions.byVisibleText("04:40").from(Meeting.SELECT_MEETING_TIME_END),
-                //SelectFromOptions.byVisibleText("Prueba1").from(Meeting.SELECT_MEETING_UNIT)
+
+                //DoubleClick.on(Meeting.SELECT_MEETING_UNIT),
+                //SelectFromOptions.byVisibleText("Prueba1").from(Meeting.SELECT_MEETING_UNIT),
+                //Enter.theValue("Prueba1").into(Meeting.SELECT_MEETING_UNIT),
 
                 Click.on(Meeting.CLICK_BUTTON_SAVE_MEETING)
         );
